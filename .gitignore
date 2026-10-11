@@ -1,0 +1,652 @@
+# ==============================================================================
+# NELY'S SALON MANAGEMENT SYSTEM — .gitignore
+# Comprehensive Security, Privacy, Confidentiality & Compliance Rules
+# ==============================================================================
+
+# ==========================================
+# 1. Environment Variables, Secrets & Configs
+# ==========================================
+.env
+.env.*
+.env*.local
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.staging
+.env.staging.local
+.env.production
+.env.production.local
+.env.backup
+.env.vault
+.env.keys
+.env.me
+.env.dist.local
+.env.sample.local
+*.env
+*.env.php
+*.env.json
+*.env.yaml
+*.env.yml
+env.json
+env.yaml
+env.yml
+.secrets
+.secrets.*
+secrets.*
+*.secrets
+secrets/
+.envrc
+
+# Whitelist safe environment example template only
+!/.env.example
+
+# Local server configurations & database overrides
+server/config/*.local.php
+server/config/secrets.php
+server/config/credentials.php
+server/config/database.local.php
+server/config/config.local.php
+server/config/env.local.php
+config.local.php
+database.local.php
+database.json
+database.ini
+db.json
+db.ini
+connections.json
+connection.json
+*.local.json
+*.local.xml
+*.local.yaml
+*.local.yml
+*.local.env
+.htaccess.local
+.htaccess.bak
+web.config.local
+web.config.bak
+nginx.conf.local
+vhosts.conf.local
+my.ini
+my.cnf
+*.cnf
+*.conf.local
+
+# Container & Docker overrides
+docker-compose.override.yml
+docker-compose.override.yaml
+docker-compose.local.yml
+docker-compose.local.yaml
+docker-compose.*.local.yml
+docker-compose.*.local.yaml
+.docker/
+
+# ==========================================
+# 2. Authentication Tokens, Keys & Certificates
+# ==========================================
+*.token
+*.jwt
+*.jwe
+*.jwk
+*.jwks
+*.secret
+*.key
+*.pem
+*.pub
+*.pkcs12
+*.pfx
+*.p12
+*.p7b
+*.p7c
+*.crt
+*.cer
+*.der
+*.csr
+*.kdbx
+*.kdb
+*.jks
+*.keystore
+*.keypair
+*.pkcs8
+*.ppk
+*.ovpn
+*.wireguard
+*.rdp
+*.pgp
+*.gpg
+*.asc
+*.sig
+*.age
+private_key*
+public_key*
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+known_hosts
+authorized_keys
+*token*.txt
+*secret*.txt
+*cred*.txt
+*password*.txt
+*auth*.txt
+*api_key*
+*apikey*
+*api_secret*
+*client_secret*
+*app_password*
+*smtp_password*
+*jwt_secret*
+*encryption_key*
+*signing_key*
+*recovery_codes*
+*backup_codes*
+*.passwd
+*.pass
+*htpasswd
+auth.json
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+credentials.yaml
+credentials.yml
+credentials.csv
+credentials.txt
+passwords.txt
+passwords.json
+*password*.json
+*accounts*.json
+*account*.json
+client_secret*.json
+service-account*.json
+*-service-account.json
+gcp-credentials*.json
+aws-credentials*
+sa-credentials.json
+google-services.json
+firebase-adminsdk*.json
+supabase*.json
+oauth*.json
+token*.json
+tokens.json
+token.txt
+api_keys.json
+apikey.json
+credentials/
+secrets/
+keys/
+certs/
+certificates/
+
+# Developer / Package Manager / CLI Credentials
+.npmrc
+.yarnrc
+.pypirc
+.netrc
+.git-credentials
+
+# ==========================================
+# 3. Payment Gateways, GCash, Banking & Webhooks
+# ==========================================
+*paymongo*.json
+*paymongo*.secret*
+*gcash*.json
+*maya*.json
+*paymaya*.json
+*paymaya*.secret*
+*stripe*.json
+*paypal*.json
+*xendit*.json
+*xendit*.secret*
+*dragonpay*.json
+*dragonpay*.secret*
+*bdo*.json
+*bpi*.json
+*unionbank*.json
+*webhook_secret*
+*webhook*.json
+*webhook*.key
+webhook-secrets.json
+*.postman_environment.json
+*thunder-client*.json
+*insomnia*.json
+*http-client.env.json
+*http-client.private.env.json
+*rest-client.env.json
+*rest-client.private.env.json
+
+# Confidential customer payment receipts, slips & proof uploads
+*gcash-receipt*
+*gcash_receipt*
+*proof_of_payment*
+*proof-of-payment*
+*proof*payment*
+*payment_proof*
+*proof_of_transfer*
+*bank_transfer_receipt*
+*receipt_upload*
+*payment_screenshot*
+*payment_slip*
+*deposit_slip*
+*transaction_receipt*
+*reference_receipt*
+*gcash_slip*
+*gcash_ss*
+*payment_attachment*
+*bank_slip*
+*transfer_slip*
+
+# ==========================================
+# 4. Database Dumps, Backups & Local DB Files
+# ==========================================
+*.sql
+*.dump
+*.sql.bak
+*.sql.gz
+*.sql.bz2
+*.sql.tar.gz
+*.sql.tar
+*.sql.zip
+*.sql.7z
+*.sql.enc
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.s3db
+*.rdb
+*.ibd
+*.frm
+*.myd
+*.myi
+*.opt
+*backup*.sql
+*dump*.sql
+*export*.sql
+*snapshot*.sql
+nelys_*.sql
+nelys_salon_db*.sql
+mysqldump*.sql
+/backups/
+/database_backups/
+/db_backups/
+/db-dumps/
+/dumps/
+/sql_backups/
+
+# Whitelist core database schema, seeds & migrations for deployment
+!server/db/schema.sql
+!server/db/seeds.sql
+!server/db/migrations/*.sql
+!server/db/migrations/**/*.sql
+
+# ==========================================
+# 5. Customer PII, Financial Reports & Exports
+# ==========================================
+/receipts/
+/invoices/
+/exports/
+/reports/export/
+/downloads/
+/data/
+/financial/
+/financials/
+*customer_export*
+*customer_list*
+*patron_list*
+*client_database*
+*sales_export*
+*financial_report*
+*transactions*.csv
+*payout*.xlsx
+*customer_dump*
+*users_export*
+*export*.json
+*backup*.json
+*audit*.json
+*report*.json
+*customer*.json
+*client*.json
+*user*.json
+*transaction*.json
+*appointment*.json
+*booking*.json
+*sales*.json
+*revenue*.json
+*summary*.json
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.tsv
+*.ods
+*.docx
+*.doc
+*.rtf
+
+# Client health / patch test / allergy records
+*medical_record*
+*patch_test*
+*allergy_record*
+*skin_test*
+*client_history*
+
+# Allow legitimate static web assets & project documentation
+!assets/**
+!docs/**
+!public/**
+
+# ==========================================
+# 6. Staff HR Data, Payroll & Government IDs
+# ==========================================
+*payroll*
+*salary*
+*salaries*
+*compensation*
+*staff_payout*
+*staff_contract*
+*employee_record*
+*hr_records*
+*sss*
+*philhealth*
+*pagibig*
+*tin_number*
+*tin_numbers*
+*valid_id*
+*government_id*
+*id_scan*
+*id_scans*
+*id_card*
+*id_cards*
+
+# ==========================================
+# 7. Communication Logs, OTPs & Mailer Secrets
+# ==========================================
+*smtp*.json
+*smtp*.log
+*mailer*.json
+*mailer*.log
+*gmail*.json
+*gmail*.secret*
+*email*.json
+*mail*.json
+*mail*.log
+*twilio*.json
+*twilio*.secret*
+*semaphore*.json
+*semaphore*.secret*
+*otp*.json
+*otp*.txt
+*otp*.log
+*2fa*.log
+*verification_code*
+*sms*.log
+*promotexter*.json
+*philsms*.json
+*movider*.json
+*itexmo*.json
+*engagespark*.json
+*infobip*.json
+*sendgrid*.json
+*mailgun*.json
+
+# ==========================================
+# 8. User Uploads, Customer Media & Storage
+# ==========================================
+# Ignore all customer and user uploaded files while preserving directory skeletons
+/uploads/**
+!/uploads/
+!/uploads/**/
+!/uploads/**/.gitkeep
+!/uploads/**/.htaccess
+/storage/
+/attachments/
+/public/uploads/
+/assets/uploads/
+/media/uploads/
+/artifacts/
+/user_uploads/
+/media_storage/
+/temp_uploads/
+!/assets/images/
+!/assets/icons/
+
+# ==========================================
+# 9. Session Files & Auth Cache
+# ==========================================
+sess_*
+*.session
+cookies.txt
+.sessions/
+/sessions/
+/php_session/
+session/
+tokens/
+jwt_cache*
+jwt_tokens*
+bearer_token*
+auth_sessions/
+storage/framework/sessions/
+
+# ==========================================
+# 10. Scratch, Test, Audit & Debugging Scripts
+# ==========================================
+/scratch/
+scratch/
+scratch_*
+scratch-*
+scratch.*
+*_scratch.*
+test_*.php
+test_*.js
+test-*.php
+test-*.js
+verify_*.php
+verify_*.js
+verify-*.php
+verify-*.js
+debug_*.php
+debug_*.js
+debug-*.php
+debug-*.js
+audit_*.js
+audit_*.php
+audit-*.js
+audit-*.php
+apply_*.js
+apply-*.js
+check_*.js
+check-*.js
+build_*.js
+temp_*.js
+temp_*.php
+tmp_*.php
+tmp_*.js
+simulate_*.js
+simulate_*.php
+simulate-*.js
+simulate-*.php
+dump_*.php
+export_*.php
+seed_*.php
+run_*.php
+test_*.sql
+check_*.sql
+phpinfo.php
+info.php
+adminer.php
+adminer-*.php
+*.patch
+*.diff
+*.test.local.*
+*.debug.*
+*.sandbox.*
+
+# ==========================================
+# 11. Logs, PID, Profilers & Debug Output
+# ==========================================
+*.log
+error_log
+php_errors.log
+php_error.log
+php-errors.log
+php_error_log
+xdebug.log
+cachegrind.out.*
+access_log
+access.log
+debug.log
+mysql.log
+mysql_error.log
+mysqld.log
+mariadb.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+.phpunit.result.cache
+core
+core.*
+*.dmp
+*.stackdump
+*.crash
+crash_report*
+
+# Test coverage & runner artifacts
+coverage/
+.nyc_output/
+phpunit.xml
+!phpunit.xml.dist
+.pest/
+
+# Shell & terminal command history
+.bash_history
+.zsh_history
+.history/
+*.history
+ConsoleHost_history.txt
+psreadline_history.txt
+.powershell_history
+
+# ==========================================
+# 12. Local Server (XAMPP / Apache / PHP) Overrides
+# ==========================================
+httpd.conf.local
+php.ini.local
+*.sock
+*.socket
+xampp/
+mysql/
+apache/
+phpmyadmin/
+phpmyadmin.config.php
+
+# ==========================================
+# 13. Dependencies & Vendor Directories
+# ==========================================
+/node_modules/
+/vendor/
+composer.phar
+.npm/
+.pnpm-store/
+.yarn/
+
+# ==========================================
+# 14. Temporary Files, Caches & Archives
+# ==========================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.old
+*.save
+*.orig
+*.swp
+*.swo
+*~
+*.crswap
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+.cache/
+.parcel-cache/
+.turbo/
+.sass-cache/
+
+# ==========================================
+# 15. Cloud Platforms & Dev Tool State
+# ==========================================
+.railway/
+.vercel/
+.netlify/
+.fly/
+.heroku/
+.render/
+.aws/
+.ssh/
+.gcloud/
+.azure/
+
+# ==========================================
+# 16. IDEs, Editors, Database Tools & AI Workspaces
+# ==========================================
+.vscode/
+.idea/
+.fleet/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.dbml
+*.sqldesigner*
+.gemini/
+.agents/
+.cursor/
+.windsurf/
+.claude/
+.copilot/
+.antigravity/
+.cline/
+.roo/
+.chatgpt/
+*.prompt.md
+scratchpad_*.md
+.dbeaver/
+.navicat/
+.tableplus/
+.heidi/
+*.sqlclient*
+.server/
+.runtime/
+.state/
+.pids/
+.system_generated/
+
+# ==========================================
+# 17. Operating System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/

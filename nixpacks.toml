@@ -1,0 +1,11 @@
+# Disable default auto-detected providers to prevent Nixpacks from launching Apache
+providers = []
+
+[phases.setup]
+nixPkgs = ["php82", "php82Extensions.pdo_mysql"]
+
+[phases.build]
+cmds = []
+
+[start]
+cmd = "sh start.sh"

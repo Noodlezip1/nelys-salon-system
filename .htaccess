@@ -1,0 +1,61 @@
+# ==============================================================================
+# Nely's Salon Management System - Root Security & Routing Configuration
+# ==============================================================================
+
+# Disable directory browsing
+Options -Indexes
+
+# Security Response Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Block access to sensitive system files, configs, and logs
+<FilesMatch "(?i)\.(env.*|git.*|gitignore|log|sql|ini|bak|sh|md|lock|json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Allow public web app manifest / assets if needed (e.g. site.webmanifest)
+<Files "site.webmanifest">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+</Files>
+
+# REST API URL Routing Gateway
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Pass Authorization header to PHP
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Route /api/ requests to api/index.php
+    RewriteRule ^api/?(.*)$ api/index.php [QSA,L]
+</IfModule>
+
+# Suppress PHP error display in production and enable logging
+<IfModule mod_php.c>
+    php_flag display_errors off
+    php_flag display_startup_errors off
+    php_flag log_errors on
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag display_errors off
+    php_flag display_startup_errors off
+    php_flag log_errors on
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag display_errors off
+    php_flag display_startup_errors off
+    php_flag log_errors on
+</IfModule>

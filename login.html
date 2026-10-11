@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up — Nely’s Salon | "Your Beauty Is Our Duty"</title>
+  <meta name="description" content="Sign in or create an account with Nely's Salon to manage your appointments, view service history, and enjoy exclusive 15-year rewards.">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 (Free Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/output.css">
+
+  <!-- Preload Critical Above-the-Fold Images -->
+  <link rel="preload" as="image" href="assets/images/frontview1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/logo.jfif">
+</head>
+<body class="h-full bg-[#FDFBF7] text-[#2b1d1d] antialiased selection:bg-[#810B38] selection:text-white flex flex-col justify-between">
+
+  <!-- Main Split Container -->
+  <main class="flex-1 min-h-screen grid grid-cols-1 lg:grid-cols-12">
+    
+    <!-- ================= LEFT SIDE — BRANDING (DESKTOP VIEW) ================= -->
+    <div 
+      class="hidden lg:flex lg:col-span-5 text-white lg:p-12 xl:p-14 flex-col justify-between relative overflow-hidden bg-[#241719]"
+    >
+      
+      <!-- Background Cover Image -->
+      <img 
+        src="assets/images/frontview1.jpg" 
+        alt="Nely's Salon Front View" 
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+        style="filter: blur(8px); -webkit-filter: blur(8px); transform: scale(1.08);"
+      >
+
+      <!-- Brand Gradient & Tint Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/65 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[#1a0a0a]/30 mix-blend-multiply pointer-events-none"></div>
+      
+      <!-- Top Branding Bar -->
+      <div class="relative z-10">
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-[#DCC3AA] hover:text-white transition-colors mb-8 group">
+          <i class="fa-solid fa-arrow-left text-[11px] group-hover:-translate-x-1 transition-transform"></i>
+          <span>Back to Home</span>
+        </a>
+
+        <!-- Logo & Salon Name -->
+        <div class="flex items-center gap-4 mb-5">
+          <img 
+            src="assets/images/logo.jfif" 
+            alt="Nely's Salon Logo" 
+            class="w-14 h-14 rounded-full border-2 border-[#DCC3AA] object-cover shadow-xl shrink-0"
+          >
+          <div>
+            <span class="font-serif text-2xl xl:text-3xl font-bold tracking-widest text-[#F1E2D1] uppercase block drop-shadow-md">
+              NELY’S SALON
+            </span>
+            <span class="text-xs tracking-[0.25em] uppercase text-[#DCC3AA] font-semibold block drop-shadow-sm">
+              Lagro, Quezon City
+            </span>
+          </div>
+        </div>
+
+        <!-- Salon Motto -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-[#DCC3AA]/50 backdrop-blur-md mb-5 shadow-sm">
+          <i class="fa-solid fa-sparkles text-[#DCC3AA] text-xs"></i>
+          <span class="font-serif italic text-sm text-[#F1E2D1] tracking-wide">
+            “YOUR BEAUTY IS OUR DUTY”
+          </span>
+        </div>
+
+        <!-- Dynamic Welcoming Message -->
+        <div class="space-y-2.5">
+          <h1 id="heroBrandTitle" class="font-serif text-3xl xl:text-4xl text-[#F1E2D1] font-normal leading-snug drop-shadow-md">
+            Welcome to Your Beauty Sanctuary
+          </h1>
+          <p id="heroBrandDesc" class="text-sm text-[#F1E2D1]/90 leading-relaxed font-light drop-shadow-sm">
+            Sign in to manage your appointments, review service history, or register to experience 15 years of trusted salon care in Lagro, QC.
+          </p>
+        </div>
+      </div>
+
+      <!-- Left Bottom Features -->
+      <div class="relative z-10 mt-6 pt-4 border-t border-[#DCC3AA]/30 text-xs text-[#F1E2D1] space-y-2.5 bg-black/40 p-4 rounded-2xl border border-[#DCC3AA]/30 backdrop-blur-md shadow-lg">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center text-white shrink-0 border border-white/20">
+            <i class="fa-solid fa-award text-xs text-[#DCC3AA]"></i>
+          </div>
+          <span class="font-medium">15 Years of Beauty &amp; Care in Lagro, Quezon City</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center text-white shrink-0 border border-white/20">
+            <i class="fa-solid fa-house-laptop text-xs text-[#DCC3AA]"></i>
+          </div>
+          <span class="font-medium">Seamless In-Salon &amp; Home Service Booking</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center text-white shrink-0 border border-white/20">
+            <i class="fa-solid fa-bell text-xs text-[#DCC3AA]"></i>
+          </div>
+          <span class="font-medium">Automated SMS &amp; Email Appointment Reminders</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= RIGHT SIDE — FORM CONTAINER ================= -->
+    <div class="col-span-12 lg:col-span-7 bg-[#FDFBF7] px-4 py-4 sm:px-8 sm:py-6 lg:px-10 lg:py-6 flex flex-col justify-between items-center relative min-h-screen">
+      
+      <!-- Top Mobile Header -->
+      <div class="w-full max-w-md flex justify-between items-center pb-3 mb-2 lg:hidden border-b border-[#E8D9CA]/60">
+        <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#810B38] hover:text-[#541A1A] transition-colors py-1">
+          <i class="fa-solid fa-arrow-left text-[11px]"></i>
+          <span>Back to Home</span>
+        </a>
+        <span class="font-serif text-sm sm:text-base font-bold text-[#541A1A] tracking-wider uppercase">NELY'S SALON</span>
+      </div>
+
+      <!-- Form Container: Normal clean form on mobile, elegant card on desktop -->
+      <div class="w-full max-w-md sm:max-w-xl lg:max-w-2xl my-auto py-2">
+        <div class="w-full bg-transparent sm:bg-white sm:rounded-3xl p-0 sm:p-7 lg:p-8 sm:shadow-2xl sm:border sm:border-[#E8D9CA] relative">
+          
+          <!-- ================= FORM 1: LOGIN ================= -->
+          <form id="formLogin" onsubmit="handleLoginSubmit(event)" class="space-y-4 ">
+            <div class="text-left mb-6">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-[#810B38] bg-[#810B38]/10 px-3 py-1 rounded-full mb-2.5">Client Portal</span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#541A1A] mb-1">
+                Welcome Back
+              </h2>
+              <p class="text-xs text-[#735e5e]">
+                Enter your credentials to access your appointments and beauty records.
+              </p>
+            </div>
+
+            <!-- Email or Mobile -->
+            <div class="text-left">
+              <label for="loginIdentifier" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1.5">
+                Mobile Number or Email
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                  <i class="fa-regular fa-envelope text-xs"></i>
+                </span>
+                <input 
+                  type="text" 
+                  id="loginIdentifier" 
+                  required 
+                  placeholder="Enter your email or mobile number"
+                  class="w-full pl-10 pr-4 py-3 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                >
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="text-left">
+              <label for="loginPassword" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1.5">
+                Password
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                  <i class="fa-solid fa-lock text-xs"></i>
+                </span>
+                <input 
+                  type="password" 
+                  id="loginPassword" 
+                  required 
+                  placeholder="••••••••"
+                  class="w-full pl-10 pr-10 py-3 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                >
+                <button 
+                  type="button" 
+                  onclick="togglePasswordVisibility('loginPassword', this)" 
+                  class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#735e5e] hover:text-[#810B38]"
+                  aria-label="Toggle password visibility">
+                  <i class="fa-regular fa-eye text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Remember This Device & Forgot Password Row -->
+            <div class="flex items-center justify-between text-xs pt-1">
+              <label class="flex items-center gap-2 cursor-pointer select-none text-[#735e5e] hover:text-[#541A1A]">
+                <input type="checkbox" checked class="accent-[#810B38] rounded">
+                <span>Remember this device</span>
+              </label>
+              <a href="#" onclick="showToast('Password reset link sent to your registered contact.', 'info'); return false;" class="text-[11px] font-semibold text-[#810B38] hover:underline hover:text-[#541A1A] transition-colors">
+                Forgot password?
+              </a>
+            </div>
+
+            <!-- Burgundy Primary Button -->
+            <button 
+              type="submit" 
+              class="w-full py-3.5 rounded-full bg-[#810B38] text-white text-xs font-bold tracking-wider uppercase hover:bg-[#62082b] transition-all shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-2">
+              <i class="fa-solid fa-right-to-bracket text-xs"></i>
+              <span>LOG IN TO ACCOUNT</span>
+            </button>
+
+            <!-- Divider -->
+            <div class="relative flex py-2 items-center">
+              <div class="flex-grow border-t border-[#E8D9CA]"></div>
+              <span class="flex-shrink mx-3 text-[11px] text-[#735e5e] uppercase tracking-wider font-semibold">Or</span>
+              <div class="flex-grow border-t border-[#E8D9CA]"></div>
+            </div>
+
+            <!-- Guest Booking Shortcut -->
+            <a 
+              href="index.html#online-booking" 
+              class="w-full py-2.5 rounded-full bg-[#FAF6F0] text-[#541A1A] border border-[#DCC3AA] hover:border-[#810B38] text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-plus text-xs text-[#810B38]"></i>
+              <span>Continue as Guest to Book</span>
+            </a>
+
+            <!-- Link to Sign Up -->
+            <p class="text-xs text-center text-[#735e5e] pt-1">
+              Don't have an account yet?
+              <a 
+                href="signup.html" 
+                onclick="event.preventDefault(); switchAuthMode('signup');"
+                class="text-[#810B38] font-bold underline hover:text-[#541A1A] ml-1 cursor-pointer">
+                Create an account
+              </a>
+            </p>
+          </form>
+
+          <!-- ================= FORM 2: SIGN UP ================= -->
+          <form id="formSignUp" onsubmit="handleSignUpSubmit(event)" class="space-y-4 hidden">
+            <div class="text-left mb-5">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-[#810B38] bg-[#810B38]/10 px-3 py-1 rounded-full mb-2">New Client Registration</span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#541A1A] mb-1">
+                Create Your Account
+              </h2>
+              <p class="text-xs text-[#735e5e]">
+                Join Nely’s Salon for personalized bookings, service records, and VIP care.
+              </p>
+            </div>
+
+            <!-- Row 1: Full Name & Mobile Number -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="text-left">
+                <label for="signupName" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1">
+                  Full Name *
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                    <i class="fa-regular fa-user text-xs"></i>
+                  </span>
+                  <input 
+                    type="text" 
+                    id="signupName" 
+                    required 
+                    placeholder="e.g. Ana Cruz"
+                    class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                  >
+                </div>
+              </div>
+
+              <div class="text-left">
+                <label for="signupPhone" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1">
+                  Mobile Number *
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                  </span>
+                  <input 
+                    type="tel" 
+                    id="signupPhone" 
+                    required 
+                    placeholder="0917 123 4567"
+                    class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="text-left">
+              <label for="signupEmail" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1">
+                Email Address *
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                  <i class="fa-regular fa-envelope text-xs"></i>
+                </span>
+                <input 
+                  type="email" 
+                  id="signupEmail" 
+                  required 
+                  placeholder="client@example.com"
+                  class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                >
+              </div>
+            </div>
+
+            <!-- Row 2: Password & Confirm Password -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="text-left">
+                <label for="signupPassword" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1">
+                  Password *
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                    <i class="fa-solid fa-lock text-xs"></i>
+                  </span>
+                  <input 
+                    type="password" 
+                    id="signupPassword" 
+                    required 
+                    minlength="6"
+                    placeholder="Min. 6 characters"
+                    class="w-full pl-10 pr-10 py-2.5 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                  >
+                  <button 
+                    type="button" 
+                    onclick="togglePasswordVisibility('signupPassword', this)" 
+                    class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#735e5e] hover:text-[#810B38]"
+                    aria-label="Toggle password visibility">
+                    <i class="fa-regular fa-eye text-xs"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-left">
+                <label for="signupConfirmPassword" class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-1">
+                  Confirm Password *
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#735e5e]">
+                    <i class="fa-solid fa-lock text-xs"></i>
+                  </span>
+                  <input 
+                    type="password" 
+                    id="signupConfirmPassword" 
+                    required 
+                    minlength="6"
+                    placeholder="Re-enter password"
+                    class="w-full pl-10 pr-10 py-2.5 rounded-xl border border-[#DCC3AA] bg-[#FAF6F0]/50 text-sm focus:outline-none focus:border-[#810B38] focus:bg-white transition-all text-[#2b1d1d]"
+                  >
+                  <button 
+                    type="button" 
+                    onclick="togglePasswordVisibility('signupConfirmPassword', this)" 
+                    class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#735e5e] hover:text-[#810B38]"
+                    aria-label="Toggle password visibility">
+                    <i class="fa-regular fa-eye text-xs"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="text-left text-xs text-[#735e5e] pt-1">
+              <label class="flex items-start gap-2 cursor-pointer select-none">
+                <input type="checkbox" required class="accent-[#810B38] rounded mt-0.5">
+                <span>I agree to Nely's Salon booking terms and data privacy policy.</span>
+              </label>
+            </div>
+
+            <!-- Burgundy Primary Button -->
+            <button 
+              type="submit" 
+              class="w-full py-3.5 rounded-full bg-[#810B38] text-white text-xs font-bold tracking-wider uppercase hover:bg-[#62082b] transition-all shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-2">
+              <i class="fa-solid fa-user-check text-xs"></i>
+              <span>CREATE CLIENT ACCOUNT</span>
+            </button>
+
+            <!-- Divider -->
+            <div class="relative flex py-1.5 items-center">
+              <div class="flex-grow border-t border-[#E8D9CA]"></div>
+              <span class="flex-shrink mx-3 text-[11px] text-[#735e5e] uppercase tracking-wider font-semibold">Or</span>
+              <div class="flex-grow border-t border-[#E8D9CA]"></div>
+            </div>
+
+            <!-- Guest Booking Shortcut -->
+            <a 
+              href="index.html#online-booking" 
+              class="w-full py-2.5 rounded-full bg-[#FAF6F0] text-[#541A1A] border border-[#DCC3AA] hover:border-[#810B38] text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-plus text-xs text-[#810B38]"></i>
+              <span>Continue as Guest to Book</span>
+            </a>
+
+            <!-- Toggle Link to Login -->
+            <p class="text-xs text-center text-[#735e5e] pt-1">
+              Already registered?
+              <a 
+                href="login.html" 
+                onclick="event.preventDefault(); switchAuthMode('login');"
+                class="text-[#810B38] font-bold underline hover:text-[#541A1A] ml-1 cursor-pointer">
+                Log in here
+              </a>
+            </p>
+          </form>
+
+          <!-- ================= FORM 3: TWO-FACTOR OTP VERIFICATION ================= -->
+          <div id="formOtp" class="space-y-4 hidden text-left">
+            <div class="mb-5">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-[#810B38] bg-[#810B38]/10 px-3 py-1 rounded-full mb-2">
+                <i class="fa-solid fa-shield-halved mr-1"></i> Two-Factor Authentication
+              </span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#541A1A] mb-1">
+                Security Verification
+              </h2>
+              <p class="text-xs text-[#735e5e]">
+                Choose your preferred channel below to receive your 6-digit verification code.
+              </p>
+            </div>
+
+            <!-- Dual Channel Option Selector (Gmail vs Phone Number) -->
+            <div class="space-y-2.5">
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#541A1A]">
+                Send Verification Code To:
+              </label>
+
+              <!-- Option 1: Gmail -->
+              <div id="channelCardEmail" onclick="selectOtpChannel('email')" class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-[#810B38] bg-[#FAF6F0] cursor-pointer transition-all hover:bg-white shadow-sm">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-[#810B38]/10 text-[#810B38] flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-envelope text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-[#541A1A] flex items-center gap-1.5">
+                      <span>Gmail / Email</span>
+                      <span id="badgeEmailActive" class="text-[9px] bg-[#810B38] text-white px-1.5 py-0.5 rounded font-bold">Selected</span>
+                    </div>
+                    <div id="otpMaskedEmail" class="text-xs text-[#735e5e] font-mono mt-0.5">m***a@email.com</div>
+                  </div>
+                </div>
+                <input type="radio" name="otp_channel" value="email" checked class="accent-[#810B38] w-4 h-4 pointer-events-none">
+              </div>
+
+              <!-- Option 2: SMS / Phone -->
+              <div id="channelCardSms" onclick="selectOtpChannel('sms')" class="flex items-center justify-between p-3.5 rounded-2xl border border-[#DCC3AA] bg-[#FAF6F0]/50 cursor-pointer transition-all hover:border-[#810B38] hover:bg-white">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-[#810B38]/10 text-[#810B38] flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-mobile-screen text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-[#541A1A] flex items-center gap-1.5">
+                      <span>Phone Number (SMS)</span>
+                      <span id="badgeSmsActive" class="text-[9px] bg-[#810B38] text-white px-1.5 py-0.5 rounded font-bold hidden">Selected</span>
+                    </div>
+                    <div id="otpMaskedPhone" class="text-xs text-[#735e5e] font-mono mt-0.5">0917 ••• ••99</div>
+                  </div>
+                </div>
+                <input type="radio" name="otp_channel" value="sms" class="accent-[#810B38] w-4 h-4 pointer-events-none">
+              </div>
+            </div>
+
+            <!-- OTP 6-Digit Code Input Section -->
+            <form onsubmit="handleOtpSubmit(event)" class="space-y-4 pt-2">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#541A1A] mb-2">
+                  Enter 6-Digit Code
+                </label>
+                
+                <div class="flex items-center justify-between gap-2 sm:gap-3" id="otpDigitInputs">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="0">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="1">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="2">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="3">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="4">
+                  <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" class="otp-digit w-11 h-13 sm:w-13 sm:h-14 text-center text-xl sm:text-2xl font-bold font-mono rounded-xl border border-[#DCC3AA] bg-white focus:border-[#810B38] focus:ring-2 focus:ring-[#810B38]/20 focus:outline-none transition-all" data-index="5">
+                </div>
+
+                <!-- Error feedback message -->
+                <div id="otpErrorMsg" class="hidden mt-2 text-xs font-semibold text-rose-600 flex items-center gap-1.5">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <span id="otpErrorText"></span>
+                </div>
+              </div>
+
+              <!-- Resend Timer -->
+              <div class="flex items-center justify-between text-xs text-[#735e5e] pt-1">
+                <span>Didn't receive the code?</span>
+                <button type="button" id="btnResendOtp" onclick="resendOtpCode()" disabled class="font-bold text-[#810B38] opacity-50 cursor-not-allowed hover:underline transition-opacity">
+                  Resend code in (<span id="resendCountdown">60</span>s)
+                </button>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="btnVerifyOtp"
+                class="w-full py-3.5 rounded-full bg-[#810B38] text-white text-xs font-bold tracking-wider uppercase hover:bg-[#62082b] transition-all shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-3">
+                <i class="fa-solid fa-shield-check text-xs"></i>
+                <span>VERIFY &amp; ACCESS DASHBOARD</span>
+              </button>
+
+              <!-- Back to Login Button -->
+              <button 
+                type="button" 
+                onclick="cancelOtpAndBackToLogin()"
+                class="w-full py-2 rounded-full bg-transparent text-[#735e5e] hover:text-[#541A1A] text-xs font-semibold tracking-wider transition-colors flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-arrow-left text-[11px]"></i>
+                <span>Back to Login</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="w-full max-w-md sm:max-w-xl lg:max-w-2xl pt-4 mt-auto text-center text-[11px] text-[#735e5e] border-t border-[#E8D9CA]/40 lg:border-t-0">
+        <span>Nely’s Salon · 15 Years of Beauty Heritage · Blk 42 Lot 59 Ascension Rd, Lagro, QC</span>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- JavaScript for Password Toggling, Mode Switching, 2FA OTP and Form Submissions -->
+  <script>
+    const current2faState = {
+      ticket: null,
+      channel: 'email',
+      maskedEmail: '',
+      maskedPhone: '',
+      countdownTimer: null,
+      countdownSeconds: 60
+    };
+
+    function switchAuthMode(mode) {
+      const loginForm = document.getElementById('formLogin');
+      const signupForm = document.getElementById('formSignUp');
+      const otpForm = document.getElementById('formOtp');
+      const titleEl = document.getElementById('heroBrandTitle');
+      const descEl = document.getElementById('heroBrandDesc');
+
+      if (otpForm) otpForm.classList.add('hidden');
+
+      if (mode === 'signup') {
+        if (loginForm) loginForm.classList.add('hidden');
+        if (signupForm) signupForm.classList.remove('hidden');
+        if (titleEl) titleEl.textContent = 'Begin Your Beauty Journey With Us';
+        if (descEl) descEl.textContent = 'Create an account to book your appointments with ease, track your favorite hair and nail rituals, and experience 15 years of personalized beauty care in Lagro, QC.';
+        document.title = 'Sign Up — Nely’s Salon | "Your Beauty Is Our Duty"';
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', 'signup.html');
+        }
+      } else {
+        if (signupForm) signupForm.classList.add('hidden');
+        if (loginForm) loginForm.classList.remove('hidden');
+        if (titleEl) titleEl.textContent = 'Welcome to Your Beauty Sanctuary';
+        if (descEl) descEl.textContent = 'Sign in to manage your appointments, review service history, or register to experience 15 years of trusted salon care in Lagro, QC.';
+        document.title = 'Login & Sign Up — Nely’s Salon | "Your Beauty Is Our Duty"';
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+      }
+    }
+
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (!input) return;
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      const bgStyle = type === 'success' 
+        ? 'bg-[#541A1A] text-[#F1E2D1] border border-[#810B38]' 
+        : type === 'error'
+        ? 'bg-[#810B38] text-white border border-[#DCC3AA]'
+        : 'bg-[#541A1A] text-white border border-[#810B38]';
+
+      toast.className = `pointer-events-auto px-5 py-3.5 rounded-xl shadow-xl text-xs sm:text-sm font-medium flex items-center justify-between gap-3 transition-all duration-300 transform translate-y-2 opacity-0 ${bgStyle}`;
+      toast.innerHTML = `
+        <div class="flex items-center gap-2">
+          <i class="${type === 'success' ? 'fa-solid fa-circle-check text-[#DCC3AA]' : type === 'error' ? 'fa-solid fa-circle-exclamation text-[#F1E2D1]' : 'fa-solid fa-circle-info text-[#DCC3AA]'} text-xs"></i>
+          <span>${message}</span>
+        </div>
+        <button type="button" class="text-white/70 hover:text-white ml-2" onclick="this.parentElement.remove()">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      `;
+
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 4500);
+    }
+
+    // 2FA OTP Handlers
+    function show2faScreen(data) {
+      current2faState.ticket = data.ticket;
+      current2faState.channel = data.default_channel || 'email';
+      current2faState.maskedEmail = data.masked_email || '';
+      current2faState.maskedPhone = data.masked_phone || '';
+
+      const loginForm = document.getElementById('formLogin');
+      const signupForm = document.getElementById('formSignUp');
+      const otpForm = document.getElementById('formOtp');
+
+      if (loginForm) loginForm.classList.add('hidden');
+      if (signupForm) signupForm.classList.add('hidden');
+      if (otpForm) otpForm.classList.remove('hidden');
+
+      const maskedEmailEl = document.getElementById('otpMaskedEmail');
+      const maskedPhoneEl = document.getElementById('otpMaskedPhone');
+      if (maskedEmailEl) maskedEmailEl.textContent = data.masked_email || 'Registered Gmail';
+      if (maskedPhoneEl) maskedPhoneEl.textContent = data.masked_phone || 'Registered Phone';
+
+      selectOtpChannel(current2faState.channel, false);
+      clearOtpInputs();
+
+      startResendCountdown(60);
+
+      setTimeout(() => {
+        const firstDigit = document.querySelector('.otp-digit[data-index="0"]');
+        if (firstDigit) firstDigit.focus();
+      }, 150);
+    }
+
+    function selectOtpChannel(channel, triggerDispatch = true) {
+      if (current2faState.channel === channel && triggerDispatch) {
+        return; // Already selected and active, prevent duplicate send
+      }
+      current2faState.channel = channel;
+      const cardEmail = document.getElementById('channelCardEmail');
+      const cardSms = document.getElementById('channelCardSms');
+      const badgeEmail = document.getElementById('badgeEmailActive');
+      const badgeSms = document.getElementById('badgeSmsActive');
+      const radioEmail = cardEmail ? cardEmail.querySelector('input[type="radio"]') : null;
+      const radioSms = cardSms ? cardSms.querySelector('input[type="radio"]') : null;
+
+      if (channel === 'email') {
+        if (cardEmail) {
+          cardEmail.classList.add('border-2', 'border-[#810B38]', 'bg-[#FAF6F0]');
+          cardEmail.classList.remove('border', 'border-[#DCC3AA]', 'bg-[#FAF6F0]/50');
+        }
+        if (badgeEmail) badgeEmail.classList.remove('hidden');
+        if (cardSms) {
+          cardSms.classList.remove('border-2', 'border-[#810B38]', 'bg-[#FAF6F0]');
+          cardSms.classList.add('border', 'border-[#DCC3AA]', 'bg-[#FAF6F0]/50');
+        }
+        if (badgeSms) badgeSms.classList.add('hidden');
+        if (radioEmail) radioEmail.checked = true;
+        if (radioSms) radioSms.checked = false;
+      } else {
+        if (cardSms) {
+          cardSms.classList.add('border-2', 'border-[#810B38]', 'bg-[#FAF6F0]');
+          cardSms.classList.remove('border', 'border-[#DCC3AA]', 'bg-[#FAF6F0]/50');
+        }
+        if (badgeSms) badgeSms.classList.remove('hidden');
+        if (cardEmail) {
+          cardEmail.classList.remove('border-2', 'border-[#810B38]', 'bg-[#FAF6F0]');
+          cardEmail.classList.add('border', 'border-[#DCC3AA]', 'bg-[#FAF6F0]/50');
+        }
+        if (badgeEmail) badgeEmail.classList.add('hidden');
+        if (radioSms) radioSms.checked = true;
+        if (radioEmail) radioEmail.checked = false;
+      }
+
+      if (triggerDispatch) {
+        resendOtpCode(channel);
+      }
+    }
+
+    async function resendOtpCode(forcedChannel = null) {
+      const channel = forcedChannel || current2faState.channel;
+      if (!current2faState.ticket) {
+        showToast('Session expired. Please sign in again.', 'error');
+        cancelOtpAndBackToLogin();
+        return;
+      }
+
+      const btnResend = document.getElementById('btnResendOtp');
+      if (btnResend && !forcedChannel) {
+        btnResend.disabled = true;
+        btnResend.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+
+      showToast(`Sending verification code via ${channel === 'sms' ? 'SMS' : 'Gmail'}...`, 'info');
+
+      try {
+        const response = await fetch('api/auth/send-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ticket: current2faState.ticket,
+            channel: channel
+          })
+        });
+
+        const result = await response.json();
+        if (!response.ok || result.status === 'error') {
+          showToast(result.message || 'Failed to dispatch code.', 'error');
+          return;
+        }
+
+        showToast(result.message || `Code sent to your ${channel === 'sms' ? 'phone' : 'Gmail'}.`, 'success');
+
+        clearOtpInputs();
+        startResendCountdown(60);
+
+      } catch (err) {
+        console.error('OTP dispatch error:', err);
+        showToast('Network error while requesting code.', 'error');
+      }
+    }
+
+    function startResendCountdown(seconds = 60) {
+      if (current2faState.countdownTimer) {
+        clearInterval(current2faState.countdownTimer);
+      }
+      current2faState.countdownSeconds = seconds;
+      const btn = document.getElementById('btnResendOtp');
+      const countEl = document.getElementById('resendCountdown');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+        btn.classList.remove('cursor-pointer');
+      }
+      if (countEl) countEl.textContent = current2faState.countdownSeconds;
+
+      current2faState.countdownTimer = setInterval(() => {
+        current2faState.countdownSeconds--;
+        if (countEl) countEl.textContent = current2faState.countdownSeconds;
+
+        if (current2faState.countdownSeconds <= 0) {
+          clearInterval(current2faState.countdownTimer);
+          if (btn) {
+            btn.disabled = false;
+            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            btn.classList.add('cursor-pointer');
+            btn.innerHTML = '<i class="fa-solid fa-rotate-right mr-1"></i> Resend code now';
+          }
+        }
+      }, 1000);
+    }
+
+    function clearOtpInputs() {
+      const digits = document.querySelectorAll('.otp-digit');
+      digits.forEach(d => {
+        d.value = '';
+        d.classList.remove('border-rose-500', 'bg-rose-50');
+      });
+      const errBox = document.getElementById('otpErrorMsg');
+      if (errBox) errBox.classList.add('hidden');
+    }
+
+    function cancelOtpAndBackToLogin() {
+      if (current2faState.countdownTimer) {
+        clearInterval(current2faState.countdownTimer);
+      }
+      current2faState.ticket = null;
+      const otpForm = document.getElementById('formOtp');
+      const loginForm = document.getElementById('formLogin');
+      if (otpForm) otpForm.classList.add('hidden');
+      if (loginForm) loginForm.classList.remove('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const digitInputs = document.querySelectorAll('.otp-digit');
+
+      digitInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+          const val = e.target.value.replace(/\D/g, '');
+          e.target.value = val ? val.slice(-1) : '';
+
+          if (e.target.value && index < digitInputs.length - 1) {
+            digitInputs[index + 1].focus();
+          }
+
+          const fullCode = Array.from(digitInputs).map(i => i.value).join('');
+          if (fullCode.length === 6) {
+            handleOtpSubmit(new Event('submit'));
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !e.target.value && index > 0) {
+            digitInputs[index - 1].focus();
+          }
+        });
+
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasteData = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '').slice(0, 6);
+          if (pasteData) {
+            pasteData.split('').forEach((char, i) => {
+              if (digitInputs[i]) digitInputs[i].value = char;
+            });
+            const lastIdx = Math.min(pasteData.length, digitInputs.length) - 1;
+            if (digitInputs[lastIdx]) digitInputs[lastIdx].focus();
+            if (pasteData.length === 6) {
+              handleOtpSubmit(new Event('submit'));
+            }
+          }
+        });
+      });
+    });
+
+    async function handleOtpSubmit(e) {
+      if (e && e.preventDefault) e.preventDefault();
+
+      const digitInputs = document.querySelectorAll('.otp-digit');
+      const code = Array.from(digitInputs).map(i => i.value).join('');
+
+      const errBox = document.getElementById('otpErrorMsg');
+      const errText = document.getElementById('otpErrorText');
+
+      if (code.length < 6) {
+        if (errBox && errText) {
+          errText.textContent = 'Please enter the complete 6-digit code.';
+          errBox.classList.remove('hidden');
+        }
+        return;
+      }
+
+      if (errBox) errBox.classList.add('hidden');
+
+      const btn = document.getElementById('btnVerifyOtp');
+      const origText = btn ? btn.innerHTML : '';
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-xs"></i> <span>VERIFYING CODE...</span>';
+      }
+
+      try {
+        const response = await fetch('api/auth/verify-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ticket: current2faState.ticket,
+            code: code,
+            channel: current2faState.channel
+          })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || result.status === 'error') {
+          const msg = result.message || 'Invalid verification code.';
+          if (errBox && errText) {
+            errText.textContent = msg;
+            errBox.classList.remove('hidden');
+          }
+          digitInputs.forEach(d => {
+            d.classList.add('border-rose-500', 'bg-rose-50');
+          });
+          if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = origText;
+          }
+          return;
+        }
+
+        clearAllCustomerCaches();
+
+        const user = result.data.user;
+        const token = result.data.token;
+        localStorage.setItem('nelys_token', token);
+        localStorage.setItem('nelys_user', JSON.stringify(user));
+
+        const displayName = user.full_name || 'Valued Client';
+        showToast(`Verification successful! Welcome, ${displayName}...`, 'success');
+
+        setTimeout(() => {
+          if (user.role === 'admin') {
+            window.location.href = 'admin/dashboard.html';
+          } else {
+            window.location.href = 'customer/dashboard.html';
+          }
+        }, 1000);
+
+      } catch (err) {
+        console.error('Verify OTP connection error:', err);
+        showToast('Unable to connect to verification server.', 'error');
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = origText;
+        }
+      }
+    }
+
+    async function handleLoginSubmit(e) {
+      e.preventDefault();
+      const identifier = document.getElementById('loginIdentifier').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      if (!identifier || !password) {
+        showToast('Please enter your email or mobile number and password.', 'error');
+        return;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-xs"></i> <span>CHECKING CREDENTIALS...</span>';
+      }
+
+      try {
+        const response = await fetch('api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            email: identifier,
+            password: password
+          })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || result.status === 'error') {
+          const errorMsg = result.message || 'Invalid login credentials.';
+          showToast(errorMsg, 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
+          return;
+        }
+
+        if (result.data && result.data.requires_2fa) {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
+          show2faScreen(result.data);
+          return;
+        }
+
+        clearAllCustomerCaches();
+        const user = result.data.user;
+        const token = result.data.token;
+        localStorage.setItem('nelys_token', token);
+        localStorage.setItem('nelys_user', JSON.stringify(user));
+
+        const displayName = user.full_name || identifier;
+        showToast(`Welcome back, ${displayName}! Directing to your dashboard...`, 'success');
+
+        setTimeout(() => {
+          if (user.role === 'admin') {
+            window.location.href = 'admin/dashboard.html';
+          } else {
+            window.location.href = 'customer/dashboard.html';
+          }
+        }, 1200);
+
+      } catch (err) {
+        console.error('Login connection error:', err);
+        showToast('Unable to connect to server. Please check your connection.', 'error');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+        }
+      }
+    }
+
+    function clearAllCustomerCaches() {
+      try {
+        const keysToRemove = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && (key.startsWith('nelys_') || key.startsWith('booking_'))) {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach(k => localStorage.removeItem(k));
+        sessionStorage.clear();
+      } catch (e) {}
+    }
+
+    async function handleSignUpSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('signupName').value.trim();
+      const phone = document.getElementById('signupPhone').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const password = document.getElementById('signupPassword').value;
+      const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+      if (password !== confirmPassword) {
+        showToast('Passwords do not match. Please re-check both password fields.', 'error');
+        document.getElementById('signupConfirmPassword').focus();
+        return;
+      }
+
+      if (password.length < 6) {
+        showToast('Password must be at least 6 characters.', 'error');
+        document.getElementById('signupPassword').focus();
+        return;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-xs"></i> <span>CREATING ACCOUNT...</span>';
+      }
+
+      try {
+        const response = await fetch('api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            full_name: name,
+            phone: phone,
+            email: email,
+            password: password
+          })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || result.status === 'error') {
+          let errorMsg = result.message || 'Registration failed.';
+          if (result.errors) {
+            const fieldErrors = Object.values(result.errors).flat();
+            if (fieldErrors.length > 0) {
+              errorMsg = fieldErrors.join(' ');
+            }
+          }
+          showToast(errorMsg, 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
+          return;
+        }
+
+        clearAllCustomerCaches();
+
+        if (result.data?.token) {
+          localStorage.setItem('nelys_token', result.data.token);
+        }
+        if (result.data?.user) {
+          localStorage.setItem('nelys_user', JSON.stringify(result.data.user));
+        }
+
+        showToast(`Account created for ${name}! Redirecting to customer dashboard...`, 'success');
+        setTimeout(() => {
+          window.location.href = 'customer/dashboard.html';
+        }, 1500);
+
+      } catch (err) {
+        console.error('Sign up connection error:', err);
+        showToast('Unable to connect to server. Please check your connection.', 'error');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#signup' || path.endsWith('signup.html')) {
+        switchAuthMode('signup');
+      } else if (hash === '#login' || path.endsWith('login.html')) {
+        switchAuthMode('login');
+      }
+    });
+
+    window.addEventListener('popstate', () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#signup' || path.endsWith('signup.html')) {
+        switchAuthMode('signup');
+      } else {
+        switchAuthMode('login');
+      }
+    });
+  </script>
+</body>
+</html>
